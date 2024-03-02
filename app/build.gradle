@@ -1,0 +1,100 @@
+plugins {
+    id 'com.android.application'
+    //id 'com.google.gms.google-services'
+    //id 'com.google.firebase.crashlytics'
+}
+
+
+android {
+    namespace 'com.example.foodpos_counter'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.foodpos_counter"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    //Printer
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/PosPrinterSDK.jar')
+    implementation files('libs/IminLibs1.0.15.jar')
+    implementation files('libs/iminPrinterSDK-11_V1.1.0_2307141447.jar')
+    implementation 'com.starmicronics:starioextension:1.14.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //circleImage-----------------------------------------------------------------------------------
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    //Glide-----------------------------------------------------------------------------------------
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.13.0")
+
+    //Retrofit--------------------------------------------------------------------------------------
+    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    implementation "com.squareup.okhttp3:okhttp:4.9.3"
+
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+
+    // Room components------------------------------------------------------------------------------
+    implementation "androidx.room:room-runtime:2.6.1"
+    annotationProcessor "androidx.room:room-compiler:2.6.1"
+    androidTestImplementation "androidx.room:room-testing:2.6.1"
+
+    // Lifecycle components-------------------------------------------------------------------------
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+    implementation "androidx.lifecycle:lifecycle-livedata:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.6.2"
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.6.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //Gson------------------------------------------------------------------------------------------
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    //swiperefreshlayout-------------------------------------------------------------
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+
+    // Import the Firebase BoM---------------------------------------------------------------------
+    implementation platform('com.google.firebase:firebase-bom:32.7.2')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging'
+//    implementation 'com.google.android.gms:play-services-auth'
+   // implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    //onesignal------------------------------------------------------------------------------------
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+
+    // Add the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+
+}

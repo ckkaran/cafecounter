@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dhivya Cafe Counter</string>
+    <string name="app_name1">Counter Pos</string>
+    <string name="no_second_screen">No second screen</string>
+</resources>

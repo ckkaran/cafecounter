@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp">
+
+        <CheckBox
+            android:id="@+id/addons_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Cheese"
+            android:textSize="25dp"
+            android:textColor="#000"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/addons_reduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="2dp"
+            android:background="@drawable/qty_back"
+            android:backgroundTint="#E1DB0B"
+            android:src="@drawable/ic_baseline_remove_24" />
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/addons_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0dp"/>
+
+        <ImageButton
+            android:id="@+id/addons_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="2dp"
+            android:background="@drawable/qty_back"
+            android:backgroundTint="#E1DB0B"
+            android:src="@drawable/ic_baseline_add_24" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RM  :"
+            android:textSize="25dp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/addons_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.00"
+            android:textSize="25dp"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+
+</LinearLayout>
